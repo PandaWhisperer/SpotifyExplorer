@@ -1,4 +1,6 @@
-var SpotifyExplorer = window.SpotifyExplorer = Ember.Application.create();
+var SpotifyExplorer = window.SpotifyExplorer = Ember.Application.create({
+    appName: 'SpotifyExplorer'
+});
 
 /* Order and include as you please. */
 require('scripts/controllers/*');
