@@ -17,10 +17,12 @@
             <div>
                 <div class="col-md-3">
                     <div class="well sidebar-nav">
-                        <strong>Colors</strong>
-                        <ul class="list-group">
-                        {{#each item in controller}}
-                            <li class="list-group-item">{{item}}</li>
+                        {{input type="text" class="new-search" placeholder="Search" value=newSearch insert-newline="newSearch" }}
+                        <button class="btn btn-primary btn-sm search-button" {{action "newSearch"}} {{bind-attr disabled=disabled}}>Search</button>
+
+                        <ul class="list-group search-list">
+                        {{#each search in controller}}
+                            <li class="list-group-item">{{search.query}}</li>
                         {{/each}}
                         </ul>
                     </div>
