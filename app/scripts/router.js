@@ -1,3 +1,3 @@
 SpotifyExplorer.Router.map(function () {
-  // Add your routes here
+    this.route("search", { path: "/search/:query" });
 });
