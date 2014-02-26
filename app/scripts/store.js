@@ -1,0 +1,1 @@
+Spotifyexplorer.ApplicationAdapter = DS.FixtureAdapter;
