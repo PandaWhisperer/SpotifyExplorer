@@ -1,0 +1,22 @@
+<div class="well">
+    <h3>Results</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Artist</th>
+                <th>Album</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {{#each model}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{artist}}</td>
+                    <td>{{album}}</td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
