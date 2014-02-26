@@ -1,3 +1,3 @@
-Spotifyexplorer.Router.map(function () {
+SpotifyExplorer.Router.map(function () {
   // Add your routes here
 });
