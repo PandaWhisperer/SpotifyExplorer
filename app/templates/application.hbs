@@ -17,12 +17,14 @@
             <div>
                 <div class="col-md-3">
                     <div class="well sidebar-nav">
-                        {{input type="text" class="new-search" placeholder="Search" value=newSearch insert-newline="newSearch" }}
+                        {{input type="text" class="new-search" placeholder="Enter query..." value=newSearch insert-newline="newSearch" }}
                         <button class="btn btn-primary btn-sm search-button" {{action "newSearch"}} {{bind-attr disabled=disabled}}>Search</button>
 
                         <ul class="list-group search-list">
-                        {{#each search in controller}}
-                            <li class="list-group-item">{{search.query}}</li>
+                        {{#each model}}
+                            {{#link-to "results" this class="list-group-item search-link"}}
+                                {{query}}
+                            {{/link-to}}
                         {{/each}}
                         </ul>
                     </div>
