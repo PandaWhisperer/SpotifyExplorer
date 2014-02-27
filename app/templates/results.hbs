@@ -6,6 +6,7 @@
                 <th>Title</th>
                 <th>Artist</th>
                 <th>Album</th>
+                <th>Duration</th>
             </tr>
         </thead>
 
@@ -15,6 +16,7 @@
                     <td>{{name}}</td>
                     <td>{{artist}}</td>
                     <td>{{album.name}}</td>
+                    <td>{{format-time length}}</td>
                 </tr>
             {{/each}}
         </tbody>
