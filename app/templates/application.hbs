@@ -24,7 +24,7 @@
                         {{#each model}}
                             {{#link-to "results" this class="list-group-item search-link"}}
                                 {{query}}
-                                <span class="remove-search pull-right glyphicon glyphicon-remove" {{action "removeSearch"}}></span>
+                                <span class="remove-search pull-right glyphicon glyphicon-remove" {{action "removeSearch" this}}></span>
                             {{/link-to}}
                         {{/each}}
                         </ul>
