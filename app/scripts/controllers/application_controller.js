@@ -21,6 +21,12 @@ SpotifyExplorer.ApplicationController = Ember.ArrayController.extend({
             search.save();
 
             this.transitionTo('results', search);
+        },
+
+        removeSearch: function() {
+            var model = this.get('model');
+            model.deleteRecord();
+            model.save();
         }
     }
 });
