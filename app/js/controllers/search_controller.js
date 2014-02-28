@@ -20,7 +20,7 @@ SpotifyExplorer.SearchController = Ember.ArrayController.extend({
             // Save the new model
             search.save();
 
-            this.transitionTo('results', search);
+            this.transitionTo('search.results', search);
         },
 
         removeSearch: function(search) {
