@@ -14,26 +14,7 @@
     </nav>
     <div class="container" id="main">
         <div class="row">
-            <div>
-                <div class="col-md-3">
-                    <div class="well sidebar-nav">
-                        {{input type="text" class="new-search" placeholder="Enter query..." value=newSearch insert-newline="newSearch" }}
-                        <button class="btn btn-primary btn-sm search-button" {{action "newSearch"}} {{bind-attr disabled=disabled}}>Search</button>
-
-                        <ul class="list-group search-list">
-                        {{#each model}}
-                            {{#link-to "results" this class="list-group-item search-link"}}
-                                {{query}}
-                                <span class="remove-search pull-right glyphicon glyphicon-remove" {{action "removeSearch" this}}></span>
-                            {{/link-to}}
-                        {{/each}}
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-9">
-                    {{outlet}}
-                </div>
-            </div>
+            {{outlet}}
         </div>
     </div>
 </div>

@@ -1,4 +1,4 @@
-SpotifyExplorer.ApplicationController = Ember.ArrayController.extend({
+SpotifyExplorer.SearchController = Ember.ArrayController.extend({
     newSearch: '',
 
     disabled: function() {
