@@ -10,7 +10,7 @@ SpotifyExplorer.Helpers.spotifyURL = function(uri) {
     }
 
     return uri;
-}
+};
 
 Ember.Handlebars.helper('spotify-link', function(uri, title) {
     var url = SpotifyExplorer.Helpers.spotifyURL(uri);
@@ -19,8 +19,8 @@ Ember.Handlebars.helper('spotify-link', function(uri, title) {
 });
 
 // from http://stackoverflow.com/a/6313008
-Ember.Handlebars.helper('format-time', function(seconds) {
-    var sec_num = parseInt(seconds, 10); // don't forget the second param
+Ember.Handlebars.helper('format-time', function(secs) {
+    var sec_num = parseInt(secs, 10); // don't forget the second param
     var hours   = Math.floor(sec_num / 3600);
     var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
     var seconds = sec_num - (hours * 3600) - (minutes * 60);
