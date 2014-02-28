@@ -23,9 +23,9 @@ SpotifyExplorer.SearchController = Ember.ArrayController.extend({
             this.transitionTo('results', search);
         },
 
-        removeSearch: function(params) {
-            var search = this.store.find('search', params.id);
-            this.store.deleteRecord(search);
+        removeSearch: function(search) {
+            search.deleteRecord();
+            search.save()
         }
     }
 });
