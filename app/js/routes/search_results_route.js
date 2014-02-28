@@ -9,10 +9,9 @@ SpotifyExplorer.SearchResultsRoute = Ember.Route.extend({
         // query Spotify API and transform results
         Ember.$.getJSON(url).then(function(result) {
             // turn results into Ember objects
-            return result.tracks.map(function(track) {
+            var results = result.tracks.map(function(track) {
                 return SpotifyExplorer.Track.create(track);
             });
-        }).then(function(results) {
             // set as property on our model
             return search.set('results', results);
         });
