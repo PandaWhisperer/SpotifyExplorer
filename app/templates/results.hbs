@@ -12,9 +12,15 @@
         <tbody>
             {{#each}}
                 <tr>
-                    <td>{{name}}</td>
-                    <td>{{artist}}</td>
-                    <td>{{album.name}}</td>
+                    <td><a {{bind-attr href=href}}>{{name}}</a></td>
+                    <td>
+                        <ul class="artists">
+                        {{#each artist in artists}}
+                            <li><a {{bind-attr href=artist.href}}>{{artist.name}}</a></li>
+                        {{/each}}
+                        </ul>
+                    </td>
+                    <td><a {{bind-attr href=album.href}}>{{album.name}}</a></td>
                     <td>{{format-time length}}</td>
                 </tr>
             {{/each}}

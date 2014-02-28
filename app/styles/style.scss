@@ -9,3 +9,19 @@ html, body {
 .search-list {
     margin-top: 10px;
 }
+
+// format artists in table as comma-separated list
+// see http://milov.nl/2883
+.artists {
+    display: inline;
+    list-style: none;
+
+    li {
+        display: inline;
+
+        &:after { content: ", "; }
+        &:last-of-type:after { content: ""; }
+        // note: need :last-of-type above instead of :last-child because
+        // Ember.js inserts empty <script> tags for data binding
+    }
+}
