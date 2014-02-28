@@ -1,3 +1,23 @@
+SpotifyExplorer.Helpers = SpotifyExplorer.Helpers || {};
+
+// turns a Spotify URI into a HTTP URL
+// see http://news.spotify.com/us/2008/01/14/linking-to-spotify/
+SpotifyExplorer.Helpers.spotifyURL = function(uri) {
+    var parts = uri.split(':');
+
+    if (parts.length === 3 && parts[0] === "spotify") {
+        return "http://open.spotify.com/" + parts[1] + "/" + parts[2];
+    }
+
+    return uri;
+}
+
+Ember.Handlebars.helper('spotify-link', function(uri, title) {
+    var url = SpotifyExplorer.Helpers.spotifyURL(uri);
+
+    return new Handlebars.SafeString('<a href="' + url + '">' + title + '</a>');
+});
+
 // from http://stackoverflow.com/a/6313008
 Ember.Handlebars.helper('format-time', function(seconds) {
     var sec_num = parseInt(seconds, 10); // don't forget the second param
@@ -14,3 +34,4 @@ Ember.Handlebars.helper('format-time', function(seconds) {
 
     return time;
 });
+
