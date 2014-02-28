@@ -1,1 +1,3 @@
-SpotifyExplorer.ApplicationAdapter = DS.FixtureAdapter;
+SpotifyExplorer.ApplicationAdapter = DS.LSAdapter.extend({
+    namespace: 'spotify-explorer'
+});
