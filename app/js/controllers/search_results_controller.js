@@ -1,2 +1,2 @@
-SpotifyExplorer.SearchResultsController = Ember.ArrayController.extend({
+SpotifyExplorer.SearchResultsController = Ember.ObjectController.extend({
 });
